@@ -1,20 +1,39 @@
-
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
 @macros {
-    header-height: 50px; 
-    navpanel-width: 16vw; 
-    navpanel-min-width:150px;
+    header-height: 80px; 
+    nav-height: 10vw; 
 }
 body {
     padding:0;margin:0;
     background-color: black;
-    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#background
+{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -5;
+    background-size: cover;
+    filter: blur(5px) brightness(0.6);
+}
+#me-bg
+{
+    width: auto; height: 300px;
+    background-size: cover;
 }
 a {
     color: inherit;
     font: inherit;
 }
+h2
+{
+    font-family: 'Cedarville Cursive', sans-serif;
+    font-size: 4em!important;
+    margin: 20px 20px;
+}
 #header {
-    background-color: #333;
+    /* background-color: #333; */
     height:header-height;
     font-size: 30px;
     line-height: header-height;
@@ -22,34 +41,22 @@ a {
     color:white;
     padding-left: 20px;
     text-shadow: 2px 2px 1px #111;
-    box-shadow: 1px 1px 2px grey;
     z-index: 999;
     position: relative;
-}
-#navpanel {
-    background-color:cornflowerblue;
-    height: calc(100vh - header-height);
-    width:navpanel-width;
-    float:left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: navpanel-min-width;
-    box-shadow: 3px 0px 2px lightgray;
+    background-color: rgba(0,0,0,0.3);
 }
 #navlist .img {
     background-size:contain!important;
     background-repeat: no-repeat!important;
-    height:50px;
-    width:50px;
+    height:30px;
+    width:30px;
     display: block;
-    display: inline-block;
-    margin-top: 8px;
-    padding-bottom: 8px;
+    margin-left: 20px;
 }
 #content {
-    background-color:azure;
+    /* background-color:azure; */
     height: calc(100vh - header-height);
+    width: 100%;
     float: none;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -58,19 +65,23 @@ a {
 }
 #navlist {
     padding: 0;margin:0;
-    height: calc(100vh - header-height);
+    height: 100%;
     width: 75%;
-    font-size: 20px;
+    font-size: .6em;
+    float:right;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
 #navlist li {
     text-align: center;
     list-style: none;
     padding:0;margin:0;
-    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center; gap: 10px;
 }
 #navlist li > a {
     color:white;
@@ -84,8 +95,11 @@ section {
 section p {
     padding: 20px;
     margin-left: 10px;
-    background-color: cyan;
-    color: darkslategrey;
+    margin-top: 10px;
+    background-color: rgba(0,0,0,0.2);
+
+    /* color: darkslategrey; */
+    color:white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 30px;
@@ -94,8 +108,8 @@ section p {
     min-width: 50%;
 }
 section h2,h3,h4 {
-    color:#333;    
-    margin-bottom: 15px!important;
+    /* color:#333;     */
+    color:white;
 }
 section h2 {
     font-size: 36px;
@@ -104,14 +118,9 @@ section h3 {
     font-size: 30px;
 }
 section hr {
+    margin-top: 40px;
     border:none;
-    border-bottom: 4px solid cyan;
-}
-#navlabel::after {
-    color:white;
-    letter-spacing: 1px;
-    font-weight: bold;
-    content:"NAVIGATION";
+    border-bottom: 4px solid darkgray;
 }
 
 .showcase {
@@ -124,19 +133,62 @@ section hr {
     align-items: center;
     flex-direction: column;
 }
-.showcase a {
+.showcase > a {
     text-decoration: none;
     padding: 15px;
-    background-color: cyan;
+    background-color: rgba(0,0,0,0.3);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 10px 0;
+    border: 6px solid rgba(255,255,255,0.2)
 }
 .showcase a h3 {
-    color: #555;
+    color: #ddd;
     font-weight: bold;
     font-size: 2.5em;
+}
+.white-btn
+{
+    padding: 15px;
+    background-color: white;
+    color:black;
+    font-weight: bold;
+}
+.white-btn:hover
+{
+    background-color: lightgrey;
+}
+
+#fun 
+{
+    background-color: black;
+    width:100%;
+    height: 100%;
+}
+
+@media (max-width: 850px) {
+    #navlist li a 
+    {
+        display: none;
+    }
+    #navlist
+    {
+        gap: 0px;
+        justify-content: start;
+        align-items: start;
+        width: auto;
+        margin-right: 10px;
+    }
+    section, .showcase
+    {
+        width:100%;
+    }
+    section
+    {
+        padding-left: 20px;
+        padding-right: 10px;;
+    }
 }

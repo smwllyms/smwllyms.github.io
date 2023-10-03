@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Williams</title>
     <link href="css/main.css" rel="stylesheet"/>
+    <script src="./js/canvasfun.js"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rancho">
 </head>
 <body>
-    <div id="header">
-        Sam Williams
+    <div id="background">
+        <canvas id="fun"></canvas>
     </div>
-    <div id="navpanel">
+    <div id="header">
+        <span>Sam Williams</span>
         <ul id="navlist">
             <li>
                 <a id="navlabel"></a>
@@ -29,15 +33,20 @@
                 <a href="#audio" class="img" style="background: url('img/nav/audio.svg');"></a>
                 <a href="#audio">Music / Audio</a>
             </li>
+            <li>
+                <a href="./resume.pdf" target="_blank" class="img" style="background: url('img/nav/resume.svg');filter:invert(1)"></a>
+                <a href="./resume.pdf" target="_blank">Resume</a>
+            </li>
             <li></li>
         </ul>
     </div>
     <div id="content">
         <section id="about">
             <h2>About Me</h2>
+            <img id="me-bg" src="./img/me.jpg"></img>
             <p>
-                Hello, traveler! I am Sam Williams, a computer scientist and programmer specializing
-                in web-accessibility and audio program development. <br/><br/>My driving force in this world is
+                I am Sam Williams, a computer scientist and programmer specializing
+                in web-accessibility and audio programming. <br/><br/>My driving force in this world is
                 to help create a knowledgeable community of programmers that contribute to open-source
                 and educational programs and applications (for FREE) to help others learn about programming
                 and computer science! Specifically, I'd like to improve general knowledge on the development
@@ -45,11 +54,9 @@
             </p>
             <h3>Education</h3>
             <p>
-                I am a Junior at Virginia Tech planning to earn my Bachelor's in Computer Science in the
-                fall of 2022 (but who knows?). I am apart of Virginia Tech's Distributed Virtual Environments
+                I'm currently a M.S. student at Virginia Tech. I am a part of Virginia Tech's Distributed Virtual Environments
                 (DVE) Lab that specializes in Human-Computer Interaction (HCI) and eXtended Reality (XR). I have a
-                bachelor's degree in computer science, am currently working towards a master's degree in computer
-                science, and plan to pursue a Ph. D in computer science. 
+                bachelor's degree in computer science and plan to pursue a Ph. D in computer science. 
             </p>
             <hr>
         </section>
@@ -59,7 +66,7 @@
                 I am very motivated to spread my knowledge accross the world! I put much of my work on GitHub as
                 open source educational material. I love developing in JavaScript and HTML because it's how I 
                 prototype most of my projects. I then use GitHub pages to host them (guess what this site is
-                hosted on?) Here are some of my favorites you can check out by clicking on the boxes:
+                hosted on?) Here are some of my favorites you can check out for yourself:
             </p>
             <div class="showcase">
                 <a href="https://smwllyms.github.io/FourierStuff" target="_blank">
@@ -71,6 +78,7 @@
                         the live fourier analysis where you can watch the algorithm at work as it guesses the 
                         pitch of oscillators or audio input from your microphone!
                     </p>
+                    <span class="white-btn">Check it out here!</span>
                 </a>
                 <a href="https://smwllyms.github.io/BrowserAudioPluginDev" target="_blank">
                     <h3>Online Audio Plugin Development</h3>
@@ -81,6 +89,7 @@
                         If you've ever tried developing VSTs using Steinberg's SDK, you know how time consuming and 
                         redundant much of it is. 
                     </p>
+                    <span class="white-btn">Check it out here!</span>
                 </a>
                 <a href="https://smwllyms.github.io/OnlineAsmDebugger/" target="_blank">
                     <h3>Online x86 Assembly Sandbox and Debugger</h3>
@@ -93,6 +102,7 @@
                         resolvable).
 
                     </p>
+                    <span class="white-btn">Check it out here!</span>
                 </a>
             </div>
             <hr>
@@ -112,7 +122,7 @@
                 However, due to their generosity, there are upload limits, and since I've been producing music 
                 for over 8 years, I've created a few accounts. Here they are listed in order from most recent: 
             </p>
-            <ul style="font-size: 2em;">
+            <ul style="font-size: 2em;color:lightgrey">
                 <li><a href="https://soundcloud.com/sqfx3" target="_blank">sqfx4</a></li>
                 <li><a href="https://soundcloud.com/sqfxmusic" target="_blank">sqfx3</a></li>
                 <li><a href="https://soundcloud.com/squiffix" target="_blank">sqfx2</a></li>
