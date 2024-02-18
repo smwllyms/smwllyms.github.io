@@ -62,6 +62,8 @@ function start()
     function draw()
     {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle="rgb(33,33,50)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
       balls.forEach(ball=>{
           ball.draw();
           ball.x += ball.vx * ball.fx;
