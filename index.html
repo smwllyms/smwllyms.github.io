@@ -42,61 +42,64 @@
     </div>
     <div id="content">
         <section id="about">
-            <h2>About Me</h2>
-            <p>
+            <div class="subsection" id="about-me">
+                <h2>About Me</h2>
                 I am Sam Williams, a computer scientist and programmer specializing
                 in web-accessibility and audio programming. <br/><br/>My driving force in this world is
                 to help create a knowledgeable community of programmers that contribute to open-source
                 and educational programs and applications to help others learn about programming
                 and computer science! Specifically, I'd like to improve general knowledge on the development
                 of audio plugins like VSTs. Most of my work and projects focus on these two areas.
-            </p>
+                <br/><br/>
             <h3>Education</h3>
-            <p>
                 I was a part of Virginia Tech's Distributed Virtual Environments
                 (DVE) Lab that specializes in Human-Computer Interaction (HCI) and eXtended Reality (XR). I have
                 B.S. and M.S. degrees in computer science from Virginia Tech.
-            </p>
-            <p>
-                For more information, such as past projects I've worked on, work experiences, skills, etc. please check out my
-                resume, which is accessible via the navigation menu.
-            </p>
+            </div>
         </section>
             <hr>
         <section id="github">
+            <div class="subsection">
             <h2>Projects</h2>
-            <p>
+            
                 I am very motivated to spread my knowledge accross the world! I put much of my work on GitHub as
                 open source educational material. I love developing in JavaScript and HTML because it's how I 
                 prototype most of my projects. I then use GitHub pages to host them (guess what this site is
                 hosted on?) Here are some of my favorites that you can check out for yourself:
-            </p>
+                <br/><br/>
             <div class="showcase">
                 <a href="https://smwllyms.github.io/FourierStuff" style="background:rgba(0,0,0,0.2), url('./img/projects/fourier.png')" target="_blank">
                     <h3>Fourier Stuff</h3>
-                    <p>
+
+                    <img src="./img/projects/fourier.png"/>
+
+
                         Check out some of my work with the famous audio-processing Discrete and Fast Fourier 
                         Transform (DFT and FFT) algorithms! Explore an online calculator that showcases a 
                         variety of optomized algorithms for calculating FT and IFTs of input values, and visit 
                         the live fourier analysis where you can watch the algorithm at work as it guesses the 
                         pitch of oscillators or audio input from your microphone!
-                    </p>
+                        <br/><br/>
                     <span class="white-btn">Check it out here!</span>
                 </a>
                 <a href="https://smwllyms.github.io/BrowserAudioPluginDev" target="_blank">
                     <h3>Online Audio Plugin Development</h3>
-                    <p>
+
+                    <img src="./img/projects/audioplugindev.png"/>
+
                         Explore audio processing in my plug-and-play web browser-based audio plugin GUI development
-                        sandbox! Whew, that was a mouthful. This work-in-progress is part of a larger project where
+                        sandbox! This work-in-progress is part of a larger project where
                         I hope to exponentially improve VST development time by allowing prototyping in this sandbox. 
                         If you've ever tried developing VSTs using Steinberg's SDK, you know how time consuming and 
                         redundant much of it is. 
-                    </p>
+                     <br/><br/>
                     <span class="white-btn">Check it out here!</span>
                 </a>
                 <a href="https://smwllyms.github.io/OnlineAsmDebugger/" target="_blank">
                     <h3>Online x86 Assembly Sandbox and Debugger</h3>
-                    <p>
+
+                    <img src="./img/projects/asm.png"/>
+
                         This online x86 assembly sandbox and debugger allows you to visualize and manipulate an 
                         x86 program's memory and stack during runtime. There is also a console that supports some
                         functional operations including breakpoints (line and conditional), custom labelling, and 
@@ -104,14 +107,17 @@
                         be directly imported (so long as the instructions are functional and label references are 
                         resolvable).
 
-                    </p>
+                    <br/><br/>
                     <span class="white-btn">Check it out here!</span>
                 </a>
             </div>
+        </div>
         </section>
             <hr>
         <section id="audio">
+            <div class="subsection">
             <h2>Music & Audio</h2>
+            <img src="./img/soundcloud.png"/>
             <p>
                 I have had a very musical life. I grew up playing guitar, the saxaphone, and french horn.
                 Music is definitely one of my favorite things in the world. 
@@ -119,19 +125,31 @@
                 electronic dance music (EDM). It inspired me to begin producing music, a hobby I continue to pursue
                 almost daily. I first started using FL studio, my digital audio workstation (DAW), back
                 when I was just 13 years old in 2014. Almost 10 years later, I'm still out here doin my thing.
-            </p>
-            <p>
+                <br/><br/>
                 I must give my thanks to SoundCloud for providing a FREE platform for me to share my music!
                 However, due to their generosity, there are upload limits, and since I've been producing music 
                 for a while, I've had to create a few accounts. Here they are listed in order from most recent: 
-            </p>
-            <ul style="font-size: 2em;color:lightgrey">
+                <br/><br/>
+            </p>    
+            <ul id="dates">
+                <li>2014</li>
+                <li>2024</li>
+            </ul>
+            <div id="timeline">
+                <svg viewBox="0 0 100 10" height="100px">
+                    <circle cx="2.5" r="2.5" cy="5" fill="white"></circle>
+                    <path d="M2.5 5 h95" stroke="white"></path>
+                    <circle cx="97.5" r="2.5" cy="5"  fill="white"></circle>
+                </svg>
+            </div>
+            <ul style="flex-direction: row-reverse;">
                 <li><a href="https://soundcloud.com/squiffix-itstime" target="_blank">sqfx5</a></li>
                 <li><a href="https://soundcloud.com/sqfx3" target="_blank">sqfx4</a></li>
                 <li><a href="https://soundcloud.com/sqfxmusic" target="_blank">sqfx3</a></li>
                 <li><a href="https://soundcloud.com/squiffix" target="_blank">sqfx2</a></li>
                 <li><a href="https://soundcloud.com/sqfx" target="_blank">sqfx</a></li>
             </ul>
+            </div>
         </section>
         <hr>
         <section id="footer">

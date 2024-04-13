@@ -7,7 +7,6 @@ body {
     padding:0;margin:0;
     background-color: #444;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
 }
 #background
 {
@@ -27,7 +26,7 @@ body {
     background: url('./img/me_fr.jpg'), rgba(100,80,0,0.7);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top left;
 }
 #github {
     background:  rgba(50,25,25,0.8);
@@ -38,7 +37,6 @@ body {
 #footer {
     text-align: center;
     color:white;
-    padding: 30px;
 }
 a {
     color: inherit;
@@ -125,79 +123,41 @@ h2
     transition: 1s;
 }
 
-.subsection {
-    padding: 30px 10%;
-    box-sizing: border-box;
+section {
+    padding: 20px 60px;
+}
+section p {
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgba(0,0,0,0.4);
+
+    /* color: darkslategrey; */
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight:lighter;
+    width: 60%;
+    min-width: 50%;
+}
+section h2,h3,h4 {
+    /* color:#333;     */
+    color:white;
+    text-shadow: 1px 1px 16px#222;
 }
 section h2 {
+    margin: 80px;
+    margin-left: 20%;
     font-size: 36px;
-    text-align: center;
 }
 section h3 {
     font-size: 30px;
-    text-align: center;
-}   
+}
 hr {
     margin:0;
     border:none;
     border-bottom: 4px solid darkgray;
-}
-
-#about-me {
-    background: white;
-    width: 50%;
-    min-width: 300px;
-    min-height: 600px;
-}
-
-#github .subsection {
-    color: #eee;
-}
-
-#github img {
-    width: 60%;
-    max-height: 200px;
-    object-fit: cover;
-    object-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-bottom: 30px;
-    opacity: 0.7;
-}
-#github img:hover {
-    opacity: 1.0;
-}
-
-#audio .subsection {
-    color: #eee;
-    width: 100%;
-}
-
-#audio ul {
-    list-style: none;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 2em;
-    color:lightgrey;
-    margin:10px;
-}
-
-#timeline {
-    width: 100%;
-    padding: 20px;
-}
-
-#timeline svg {
-    width: 100%;
-}
-
-#audio img {
-    filter: invert();
-    width: 30%;
-    width: 250px;
-    margin-bottom: 30px;
 }
 
 .showcase {
