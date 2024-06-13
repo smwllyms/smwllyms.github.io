@@ -23,7 +23,8 @@ body {
     width: auto; height: 300px;
     background-size: cover;
 }
-#about {
+#mee {
+    height: 400px;
     background: url('./img/me_fr.jpg'), rgba(100,80,0,0.7);
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@ a {
 h2
 {
     font-family: sans-serif;
-    font-size: 4em!important;
+    font-size: 3em!important;
 }
 #header {
     /* background-color: #333; */
@@ -116,17 +117,17 @@ h2
     position: absolute;
     bottom: 0px;
     background-color: white;
-    transition: 1s;
+    transition: 0.5s;
     margin-left: 15px;
     align-self: center;
 }
 #navlist li:hover::after {
-    max-width:250px;
-    transition: 1s;
+    max-width:100%;
+    transition: 0.5s;
 }
 
 .subsection {
-    padding: 30px 10%;
+    padding: 30px 20%;
     box-sizing: border-box;
 }
 section h2 {
@@ -134,7 +135,7 @@ section h2 {
     text-align: center;
 }
 section h3 {
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
 }   
 hr {
@@ -145,8 +146,6 @@ hr {
 
 #about-me {
     background: white;
-    width: 50%;
-    min-width: 300px;
     min-height: 600px;
 }
 
@@ -201,30 +200,36 @@ hr {
 
 .showcase {
     margin-left: 10px;
-    min-width: 50%;
+    width: 100%;
+    flex-wrap:wrap;
     padding: 15px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 .showcase > a {
+    width: 100%;
     text-decoration: none;
     padding: 15px 55px;
     background:rgba(0,0,0,0.3);
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items:center;
     flex-direction: column;
+    overflow: hidden;
     margin: 30px 0;
-    border: 6px solid rgba(255,255,255,0.2)
+    border: 6px solid rgba(255,255,255,0.2);
+    font-size: .9em;
+    line-height: 25px;
 }
 .showcase a h3 {
     color: #fff;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2em;
+    line-height: 40px;
 }
 .white-btn
 {
