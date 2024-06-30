@@ -316,6 +316,7 @@ hr {
     .showcase
     {
         width:100%;
+        padding: 25px 0px;
     }
     .showcase a h3 {
         font-size: calc(min(28px, 2px + 3vmin))
@@ -339,5 +340,8 @@ hr {
     }
     #teach {
         background-position: 25% 25%;
+    }
+    .a-wrapper a:hover {
+        max-height: fit-content;
     }
 }
