@@ -297,7 +297,10 @@ hr {
     height: 100%;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 930px) {
+    #header > span {
+        font-size: calc(min(30px, 7px + 3.2vmin));
+    }
     #navlist li a 
     {
         display: none;
@@ -310,12 +313,31 @@ hr {
         width: auto;
         margin-right: 10px;
     }
-    section, .showcase
+    .showcase
     {
         width:100%;
     }
-    section
+    .showcase a h3 {
+        font-size: calc(min(28px, 2px + 3vmin))
+    }
+    .subsection
     {
-        padding-right: 10px;;
+        padding: 20px 50px;
+    }
+    #pix {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #pix > div {
+        width: 100%;
+        height: 300px;
+    }
+    #grad {
+        background-position: center center;
+    }
+    #teach {
+        background-position: 25% 25%;
     }
 }
