@@ -25,6 +25,33 @@ body {
     margin-bottom: 50px;
     box-shadow: 2px 2px 4px rgb(81, 77, 107);
 }
+#grad {
+    display: block;
+    height: 400px;
+    width: 40%;
+    background: url('../img/grad.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 4px rgb(81, 77, 107);
+}
+#pix {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#teach {
+    display: block;
+    height: 400px;
+    width: 40%;
+    background: url('../img/teach.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 4px rgb(81, 77, 107);
+}
 #github {
     background:  linear-gradient(to right, rgb(29, 28, 38), rgb(58, 56, 75));
 }
@@ -183,10 +210,13 @@ hr {
 #timeline {
     width: 100%;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 #timeline svg {
     width: 100%;
+    max-width: 900px;
 }
 
 #audio img {
@@ -203,31 +233,48 @@ hr {
     padding: 15px;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
-.showcase > a {
+.a-wrapper {
+    position: relative;
+    width: 100%;
+}
+.showcase > div > a {
     width: 100%;
     text-decoration: none;
     padding: 15px 55px;
-    background:rgba(0,0,0,0.3);
+    background:rgb(31, 30, 37);
     box-sizing: border-box;
     display: flex;
     justify-content: start;
     align-items:center;
     flex-direction: column;
     overflow: hidden;
-    margin: 30px 0;
+    position: relative;
+    top: 15px;
     border: 6px solid rgba(255,255,255,0.2);
     font-size: .9em;
     line-height: 25px;
+    /* height: 700px; */
+    max-height: 80px;
+    transition: 0.5s;
+}
+.a-wrapper a:hover {
+    max-height: 700px;
+    transition: 0.5s;
+}
+.a-wrapper a:not(:first-child) {
+    /* margin-top: -600px; */
+    border-top: none;
 }
 .showcase a h3 {
     color: #fff;
     font-weight: bold;
-    font-size: 2em;
+    font-size: calc(10px + 2vmin);
     line-height: 40px;
+    margin-top:5px;
 }
 .white-btn
 {
