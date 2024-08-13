@@ -9,7 +9,6 @@ h1,h2,h3 {
     font-weight: bolder;
     letter-spacing: 3px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 2px #ddd;
 }
 
 body {
@@ -87,7 +86,7 @@ a {
 }
 h2
 {
-    font-size: 3em!important;
+    font-size: 2.7em!important;
 }
 #header {
     /* background-color: #333; */
