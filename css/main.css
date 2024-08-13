@@ -4,11 +4,20 @@
     nav-height: 10vw; 
 } */
 
+h1,h2,h3 {
+    font-family: "Raleway", Arial;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px #ccc;
+}
+
 body {
     padding:0;margin:0;
     background-color: #444;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    letter-spacing: 0.5px;
 }
 #me-bg
 {
@@ -70,7 +79,6 @@ a {
 }
 h2
 {
-    font-family: sans-serif;
     font-size: 3em!important;
 }
 #header {
@@ -158,7 +166,7 @@ section h2 {
     font-size: 36px;
     text-align: center;
 }
-section h3 {
+section h4 {
     font-size: 2em;
     text-align: center;
 }   
@@ -241,7 +249,7 @@ hr {
     position: relative;
     width: 100%;
 }
-.showcase > div > a {
+.showcase-slide {
     width: 100%;
     text-decoration: none;
     padding: 15px 55px;
@@ -261,15 +269,16 @@ hr {
     max-height: 80px;
     transition: 0.5s;
 }
-.a-wrapper a:hover {
+.showcase-slide:hover {
     max-height: 700px;
     transition: 0.5s;
 }
-.a-wrapper a:not(:first-child) {
+.showcase-slide:not(:first-child) {
     /* margin-top: -600px; */
     border-top: none;
 }
-.showcase a h3 {
+
+.showcase-slide h4 {
     color: #fff;
     font-weight: bold;
     font-size: calc(10px + 2vmin);
@@ -284,6 +293,7 @@ hr {
     font-weight: bold;
     margin-bottom: 25px;
     border-radius: 4px;
+    text-decoration: none;
 }
 .white-btn:hover
 {
@@ -297,7 +307,7 @@ hr {
     height: 100%;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 950px) {
     #header > span {
         font-size: calc(min(30px, 7px + 3.2vmin));
     }
@@ -318,7 +328,7 @@ hr {
         width:100%;
         padding: 25px 0px;
     }
-    .showcase a h3 {
+    .showcase-slide h4 {
         font-size: calc(min(28px, 2px + 3vmin))
     }
     .subsection
