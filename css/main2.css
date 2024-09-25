@@ -178,7 +178,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid rgba(0,0,0,0);
     text-decoration: none;
     color:inherit;
 }
@@ -316,6 +316,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
 }
 .white-btn:hover {
     background: var(--bg-rose-500);;
