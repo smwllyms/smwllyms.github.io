@@ -1,205 +1,206 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/ico2.png">
     <title>Sam Williams</title>
-    <link href="css/main.css" rel="stylesheet"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Rancho">
+    <link href="css/main2.css" rel="stylesheet"/>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway">
-          <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Noto+Sans">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Syne">
 </head>
 <body>
-    <div id="header">
-        <span style="font-family:'Raleway">Sam Williams</span>
-        <ul id="navlist">
-            <li>
-                <a id="navlabel"></a>
-            </li>
-            <li>
-                <a href="#about" class="img" style="background: url('img/nav/about.svg');"></a>
-                <a href="#about">About Me</a>
-            </li>
-            <li>
-                <a href="#github" class="img" style="background: url('img/nav/github.svg');"></a>
-                <a href="#github">Projects</a>
-            </li>
-            <li>
-                <a href="#audio" class="img" style="background: url('img/nav/audio.svg');"></a>
-                <a href="#audio">Music / Audio</a>
-            </li>
-            <li>
-                <a href="./resume.pdf" target="_blank" class="img" style="background: url('img/nav/resume.svg');filter:invert(1)"></a>
-                <a href="./resume.pdf" target="_blank">Resume</a>
-            </li>
-            <li></li>
-        </ul>
+    <div id="nav-up">
+        <a href="#header"></a>
     </div>
-    <div id="content">
-        <section id="hero">
-            <div id="me-hero">
-                <div id="me-left">
-                    <div>
-                        <h2>BIO</h2>
-                        <p>Software Engineer specializing in immersive applications, with a strong background in audio programming and GUI development. Committed to enhancing web accessibility and creating interactive and educational web applications. Blending creativity with technical prowess to deliver impactful digital experiences.</p>
-                        <div id="socials">
-                            <a class="img" href="https://www.linkedin.com/in/shwilliams-vt/" target="_about:blank">
-                                <img src="img/linkedin2.png"/>
-                            </a>
-                            <a href="https://github.com/smwllyms" target="_about:blank">
-                                <img src="img/nav/github.svg"/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div id="header">
+        <div id="header-left">
+            <div id="pic-frame">
+
             </div>
-        </section>
-        <section id="about">
-            <div class="subsection" id="about-me">
+        </div>
+        <div id="header-right">
+            <div id="summary">
+                <h2>Sam Williams</h2>
+                <h4>Software/Audio Engineer and Creative, M.S., B.S., Computer Science</h4>
+                <p>Specializing in Audio Design/Implementation, Music Production, Web Applications + Visualizations, Automation and Innovation, UX/Usability</p>
+            </div>
+            <ul id="header-menu">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#music">Music/Audio</a></li>
+                <li><a target="_blank" href="./resume.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="section" id="quick-blurb">
+            <div class="content">
+                <div class="bubble" style="width:300px;height:300px;background: linear-gradient(120deg, var(--bg-slate-500), var(--bg-slate-600));top:50%;left:-20px;"></div>
+                <div class="bubble" style="width:100px;height:100px;background: linear-gradient(120deg, var(--bg-slate-400), var(--bg-slate-500));top:80%;left:-50px;"></div>
+                <div class="bubble" style="width:200px;height:200px;background: linear-gradient(220deg, var(--bg-slate-600), var(--bg-slate-700));top:-50px;right:20px;"></div>
+                <h2>Looking for a <span style="color:rgb(251 191 36)">diligent</span>, <span style="color:rgb(125 211 252)">versatile</span>, and <span style="color:rgb(163 230 53)">innovative</span> <span style="color:rgb(52 211 153)">team-player</span>?</h2>
+                <p>I might be your guy! Learn about my background, projects, and passions to see if I'm the right fit.</p>
+            </div>
+        </div>
+        <div class="section" id="about-me">
+            <div class="content">
                 <h2>About Me</h2>
                 <p>
-                    I am Sam Williams, a computer scientist and engineer specializing
-                    in web applications and design, programming education, and audio programming. <br/><br/>My driving force in this world is
-                    to help create a knowledgeable community of programmers that contribute to open-source
-                    and educational programs and applications to help others learn about programming
-                    and computer science! Specifically, I'd like to improve general knowledge on the development
-                    of audio plugins like VSTs. 
+                    My driving force is to help create a virtual landscape where people of all backgrounds can enjoy
+                    an accessible and easy-to-use internet with web applications that make their lives easier. I am a strong
+                    proponent of open-source software and communities as well as for efforts to create educational programs
+                    and applications to help others learn. 
+                    
+                    <br/><br/>
+                    My calling is to improve general knowledge on the nature of audio 
+                    and music, specifically on how audio and music intersect to create pleasurable and effective listening experiences.
                 </p>
-            <h3>Education</h3>
-                I was a part of Virginia Tech's Distributed Virtual Environments
-                (DVE) Lab that specializes in Human-Computer Interaction (HCI) and eXtended Reality (XR). I have
-                B.S. and M.S. degrees in computer science from Virginia Tech. I am an alum of the Galipatia living and learning community.
-                I also taught as an adjunct instructor for an introductory course to GUI, computer graphics and full-stack development.
+                <h4>Education</h4>
+                <img id="grad-pic" src="./img/grad.jpg"/>
+                <p>
+                    I have earned B.S. (2022) and M.S. (2023) degrees in computer science from Virginia Tech.  
+                    I was a member of the Galipatia engineering-focused living and learning community at VT.
+                    I also taught as an adjunct instructor for an introductory course to GUI, computer graphics and full-stack development in Spring 2024.
+
+                    <br/><br/>
+                    I was also a part of Virginia Tech's 
+                    Distributed Virtual Environments (DVE) Lab that specializes in Human-Computer Interaction (HCI) and eXtended Reality (XR). My Master's thesis,
+                    <strong><em><a target="_blank" href="https://vtechworks.lib.vt.edu/items/a03e8a5e-c5ab-44b6-803b-89504b6eae45">Exploring the Usability of Non-verbal Vocal Interaction (NVVI) and a Pitch-based Implementation</a></em></strong> explored the usability of non-verbal vocal interaction (NVVI) to control one-dimensional parameters, i.e., a slider. For example,
+                    imagine whistling to control the dimness of lights in your smart home, modulating the pitch upward to brighten and downward to darken.
+                
+                    <br/><br/>
+                    Here are some of my publications and work I contributed on during my time at VT:
+                </p>
+                <ul>
+                    <li><a target="_blank" href="https://doi.org/10.1007/978-3-031-60449-2_12">A Relative Pitch Based Approach to Non-verbal Vocal Interaction as a Continuous and One-Dimensional Controller</a></li>
+                    <li><a target="_blank" href="https://doi.ieeecomputersociety.org/10.1109/VRW62533.2024.00012">An Approach to Pitch Based Implementation of Non-verbal Vocal Interaction (NVVI)</a></li>
+                    <li><a target="_blank" href="https://doi.org/10.23919/ilrn52045.2021.9459371">Immersive Technology in the Public School Classroom: When a Class Meets</a></li>
+                    <li><a target="_blank" href="https://doi.org/10.1007/978-3-030-77411-0_23">Redefining the Digital Paradigm for Virtual Museums</a></li>
+                </ul>
                 <br/>
-            <br/>
-            <br/>
-            <div id="pix">
-                <div id="grad"></div>
-                <div id="teach"></div>
+                <img id="teach-pic" src="./img/teach.jpg"/>
             </div>
-            
         </div>
-            
-            </section>
-        <section id="github">
-            <div class="subsection">
-            <h2>Projects</h2>
-            
-                I am very motivated to spread my knowledge accross the world! I put much of my work on GitHub as
-                open source educational material. I love developing in JavaScript and HTML because it's how I 
-                prototype most of my projects. I then use GitHub pages to host them. Here are some of my favorites 
-                that you can check out for yourself by clicking them:
-                <br/><br/>
-            <div class="showcase">
-                <div class="a-wrapper">
-                    <div class="showcase-slide" tabIndex="1">
-                        <h4>AirShare</h4>
-    
-                        <img src="./img/projects/airshare.png"/>
-    
-                        AirShare is a real-time file-sharing web application allowing you to share files instantly across different devices. Implemented with WebRTC and Next.js.
-                            <br/><br/>
-                        <a class="white-btn" href="https://airshare-phi.vercel.app/" target="_blank">Check it out here!</a>
+        <div class="section" id="projects">
+            <div class="content">
+                <h2>Projects</h2>
+                <img src="./img/nav/github.svg"/>
+                <br/>
+                <p>
+                    I put much of my work on GitHub as
+                    open source educational material. I develop primarily in JavaScript and HTML because it's how I 
+                    prototype most of my projects. I then use GitHub pages to host them. Here are some of my favorites 
+                    that you can learn more about by clicking them:
+                </p>
+                <div class="showcase">
+                    <div class="a-wrapper">
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>AirShare</h4>
+        
+                            <img src="./img/projects/airshare.png"/>
+        
+                            AirShare is a real-time file-sharing web application allowing you to share files instantly across different devices. Implemented with WebRTC and Next.js.
+                            <br/>
+                            <a class="white-btn" href="https://airshare-phi.vercel.app/" target="_blank">Check it out here!</a>
                         </div>
-                    <div class="showcase-slide" tabIndex="1">
-                    <h4>Mepository</h4>
-
-                    <img src="./img/projects/mepository.png"/>
-
-                    Mepository is a virtual journal for you to record your feelings, achievements, and notable events in your life, allowing you to reflect, learn, and grow as a person all in one place. You are provided an interactive calendar to navigate and record your thoughts, feelings, and anything else you'd like to jot down. This app provides you somewhere accessible and easy to navigate to record and later reflect on your experiences through life, on a variety of temporal scales.
-                        <br/><br/>
-                    <a class="white-btn" href="https://smwllyms.github.io/mepository" target="_blank">Check it out here!</a>
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>Mepository</h4>
+        
+                            <img src="./img/projects/mepository.png"/>
+        
+                            Mepository is a virtual journal for you to record your feelings, achievements, and notable events in your life, allowing you to reflect, learn, and grow as a person all in one place. You are provided an interactive calendar to navigate and record your thoughts, feelings, and anything else you'd like to jot down. This app provides you somewhere accessible and easy to navigate to record and later reflect on your experiences through life, on a variety of temporal scales.
+                            <br/>
+                            <a class="white-btn" href="https://smwllyms.github.io/mepository" target="_blank">Check it out here!</a>
+                        </div>
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>Fourier Stuff</h4>
+        
+                            <img src="./img/projects/fourier.png"/>
+        
+        
+                                Check out some of my work with the famous audio-processing Discrete and Fast Fourier 
+                                Transform (DFT and FFT) algorithms! Explore an online calculator that showcases a 
+                                variety of optomized algorithms for calculating FT and IFTs of input values, and visit 
+                                the live fourier analysis where you can watch the algorithm at work as it guesses the 
+                                pitch of oscillators or audio input from your microphone!
+                            <br/>
+                            <a class="white-btn" href="https://smwllyms.github.io/FourierStuff"  target="_blank">Check it out here!</a>
+                        </div>
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>Audio Plugin Development</h4>
+        
+                            <img src="./img/projects/audioplugindev.png"/>
+        
+                                Explore audio processing in my plug-and-play web browser-based audio plugin GUI development
+                                sandbox! This work-in-progress is part of a larger project where
+                                I hope to exponentially improve VST development time by allowing prototyping in this sandbox. 
+                                If you've ever tried developing VSTs using Steinberg's SDK, you know how time consuming and 
+                                redundant much of it is. 
+                            <br/>
+                            <a class="white-btn" href="https://smwllyms.github.io/program-browser-v2" target="_blank">Check it out here!</a>
+                        </div>
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>x86 ASM Sandbox/Debugger</h4>
+        
+                            <img src="./img/projects/asm.png"/><br/>
+        
+                                This online x86 assembly sandbox and debugger allows you to visualize and manipulate an 
+                                x86 program's memory and stack during runtime. There is also a console that supports some
+                                functional operations including breakpoints (line and conditional), custom labelling, and 
+                                more. Assembly from Ghidra can
+                                be directly imported (so long as the instructions are functional and label references are 
+                                resolvable).
+        
+                            <br/>
+                            <a class="white-btn" href="https://smwllyms.github.io/OnlineAsmDebugger/" target="_blank">Check it out here!</a>
+                        </div>
+                        <div class="showcase-slide" tabIndex="1">
+                            <h4>Image Convolution Sandbox</h4>
+        
+                            <img src="./img/projects/imgproc.PNG"/>
+        
+                                If you've ever wondered how some basic blurring and edge detection is implemented for images,
+                                feel free to explore this sandbox where you can upload your own images and convolve them with
+                                custom kernels and see what happens! 
+        
+                            <br/>
+                            <a class="white-btn" href="https://smwllyms.github.io/img-processing/" target="_blank">Check it out here!</a>
+                        </div>
                     </div>
-                <div class="showcase-slide" tabIndex="1">
-                    <h4>Fourier Stuff</h4>
-
-                    <img src="./img/projects/fourier.png"/>
-
-
-                        Check out some of my work with the famous audio-processing Discrete and Fast Fourier 
-                        Transform (DFT and FFT) algorithms! Explore an online calculator that showcases a 
-                        variety of optomized algorithms for calculating FT and IFTs of input values, and visit 
-                        the live fourier analysis where you can watch the algorithm at work as it guesses the 
-                        pitch of oscillators or audio input from your microphone!
-                        <br/><br/>
-                    <a class="white-btn" href="https://smwllyms.github.io/FourierStuff"  target="_blank">Check it out here!</a>
-                </div>
-                <div class="showcase-slide" tabIndex="1">
-                    <h4>Audio Plugin Development</h4>
-
-                    <img src="./img/projects/audioplugindev.png"/>
-
-                        Explore audio processing in my plug-and-play web browser-based audio plugin GUI development
-                        sandbox! This work-in-progress is part of a larger project where
-                        I hope to exponentially improve VST development time by allowing prototyping in this sandbox. 
-                        If you've ever tried developing VSTs using Steinberg's SDK, you know how time consuming and 
-                        redundant much of it is. 
-                     <br/><br/>
-                    <a class="white-btn" href="https://smwllyms.github.io/program-browser-v2" target="_blank">Check it out here!</a>
-                </div>
-                <div class="showcase-slide" tabIndex="1">
-                <a>
-                    <h4>x86 ASM Sandbox/Debugger</h4>
-
-                    <img src="./img/projects/asm.png"/><br/>
-
-                        This online x86 assembly sandbox and debugger allows you to visualize and manipulate an 
-                        x86 program's memory and stack during runtime. There is also a console that supports some
-                        functional operations including breakpoints (line and conditional), custom labelling, and 
-                        more. Assembly from Ghidra can
-                        be directly imported (so long as the instructions are functional and label references are 
-                        resolvable).
-
-                    <br/><br/>
-                    <a class="white-btn" href="https://smwllyms.github.io/OnlineAsmDebugger/" target="_blank">Check it out here!</a>
-                </div>
-                <div class="showcase-slide" tabIndex="1">
-                    <h4>Image Convolution Sandbox</h4>
-
-                    <img src="./img/projects/imgproc.PNG"/>
-
-                        If you've ever wondered how some basic blurring and edge detection is implemented for images,
-                        feel free to explore this sandbox where you can upload your own images and convolve them with
-                        custom kernels and see what happens! 
-
-                    <br/><br/>
-                    <a class="white-btn" href="https://smwllyms.github.io/img-processing/" target="_blank">Check it out here!</a>
-                </div>
                 </div>
             </div>
         </div>
-        </section>
-        <section id="audio">
-            <div class="subsection">
-            <h2>Music & Audio</h2>
-            <img src="./img/soundcloud.png"/>
-            <p>
-                I grew up playing guitar, the saxaphone, and french horn.
-                Although I love many different types of genres of music, I have a special love for  
-                electronic dance music (EDM). It inspired me to begin producing music, a hobby I continue today. 
-                I first started using FL studio, my digital audio workstation (DAW), back
-                when I was just 13 years old. Over a decade later, I'm still at it. Additionally, this love
-                for music helped aim me in the direction of audio programming such as for my thesis (non-verbal vocal 
-                interaction) and coding audio plugins!
-                <br/><br/>
-                Please enjoy some of my music via the provided Spotify web player below. My music is also on a variety
-                of other streaming platforms, including Apple, Amazon Music, and Soundcloud.
-                <br/><br/>
-            </p>    
-            <div style="display: flex;justify-content: center;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2BmAeGaSrzNsxhqfoS6PKr?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="section" id="music">
+            <div class="content">
+                <h2>Music & Audio</h2>
+                <img src="./img/soundcloud.png" style="width: 30%; max-width: 250px; min-width: 100px;"/>
+                <p>
+                    I grew up playing guitar, the saxaphone, and french horn.
+                    Although I love many different types of genres of music, I have a special love for  
+                    electronic dance music (EDM). It inspired me to begin producing music, a hobby I continue today. 
+                    I first started using FL studio, my digital audio workstation (DAW), back
+                    when I was 13 years old. Over a decade later, I'm still at it. Additionally, this love
+                    for music helped aim me in the direction of audio programming, such as for my thesis (non-verbal vocal 
+                    interaction) and coding audio plugins, mainly Virtual Studio Technology (VST) plugins.
+                    <br/><br/>
+                    Please enjoy some of my music via the provided Spotify web player below. My music is also on a variety
+                    of other streaming platforms, including Apple, Amazon Music, and Soundcloud.
+                    <br/><br/>
+                </p>    
+                <div style="display: flex;justify-content: center;width:100%">
+                    <iframe style="border-radius:12px; width:100%" src="https://open.spotify.com/embed/artist/2BmAeGaSrzNsxhqfoS6PKr?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
             </div>
+        </div>
+        <div class="section" id="footer" style="min-height:20px;background:var(--bg-slate-600);color:white;text-align: center;">
+            <div class="content">
+                Made by Sam Williams, 2024. See Resume for Contact Info.
             </div>
-        </section>
-        <hr>
-        <section id="footer">
-            Sam Williams. See resume for contact information.
-        </section>
+        </div>
     </div>
 </body>
 </html>
+
