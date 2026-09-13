@@ -1,0 +1,46 @@
+name: Deploy Static Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Static Files
+        run: yarn build
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./build" 
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
