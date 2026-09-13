@@ -18,7 +18,7 @@ export const Image = ({
   ariaLabel,
   testId,
   classNames,
-  eventConfiguration
+  eventConfigurations
 }: ImageProps): React.JSX.Element => {
   return (
     <BaseElement
@@ -27,7 +27,7 @@ export const Image = ({
       testId={testId}
       classNames={classNames}
       style={wrapperStyle}
-      eventConfiguration={eventConfiguration}
+      eventConfigurations={eventConfigurations}
     >
       <img src={src} alt={alt || "image"} style={{ ...ImageBaseStyles, ...imgStyle }} />
     </BaseElement>

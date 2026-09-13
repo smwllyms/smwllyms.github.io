@@ -85,7 +85,7 @@ export const HeroSlider = ({
   return (
     <BaseElement
       style={{ ...styles, ...style }}
-      eventConfiguration={eventConfiguration}
+      eventConfigurations={[eventConfiguration]}
       id={id}
       ariaLabel={ariaLabel}
       testId={testId}
@@ -150,20 +150,20 @@ export const HeroSlider = ({
         <>
           <BaseElement
             style={leftArrowStyles}
-            eventConfiguration={{
+            eventConfigurations={[{
               listenTo: [SupportedEvents.POINTER_CLICK],
               handler: () => prev()
-            }}
+            }]}
             ariaLabel="Previous"
           >
             <div>◀</div>
           </BaseElement>
           <BaseElement
             style={rightArrowStyles}
-            eventConfiguration={{
+            eventConfigurations={[{
               listenTo: [SupportedEvents.POINTER_CLICK],
               handler: () => next()
-            }}
+            }]}
             ariaLabel="Next"
           >
             <div>▶</div>

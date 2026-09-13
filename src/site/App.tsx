@@ -9,6 +9,7 @@ import { Music } from "./sections/Music";
 import { BaseElement } from "../lib/components/Base/BaseElement";
 import { FooterStyles, HeaderStyles, HeaderTitleStyles } from "./App.css";
 import ico from "../img/ico.png";
+import { useObserverEffect } from "./hooks/useObserverEffect";
 
 export const HEADER_HEIGHT = 64;
 
@@ -24,12 +25,27 @@ const navigationEntries: Array<NavigationEntry> = [
 ]
 
 export const App = (): React.JSX.Element => {
+
+  const [offsetY, setOffsetY] = React.useState(HEADER_HEIGHT + 5);
+
   const {
     navigate,
     currentSectionIdInView
   } = useNavigation({
     navigationEntries,
-    offsetY: document.getElementById("header")?.offsetHeight || 0
+    offsetY
+  });
+
+  useObserverEffect({
+    elementId: "header",
+    callback: element => {
+      if (!element) return;
+      const height = element.getBoundingClientRect().height;
+      if (height > 0) {
+        setOffsetY(height);
+      }
+    },
+    dependencyArray: []
   });
 
   const navItems = [

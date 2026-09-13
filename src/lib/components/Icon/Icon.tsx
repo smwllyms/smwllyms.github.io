@@ -31,10 +31,10 @@ export const Icon = ({
       classNames={classNames}
       imgStyle={{ ...iconStyles, ...style }}
       src={iconUrl}
-      eventConfiguration={{
+      eventConfigurations={[{
         listenTo: [SupportedEvents.POINTER_CLICK],
         handler: () => onClick?.()
-      }}
+      }]}
     />
   )
 }

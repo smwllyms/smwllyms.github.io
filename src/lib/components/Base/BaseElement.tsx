@@ -9,7 +9,7 @@ export interface BaseElementProps {
   id?: string;
   testId?: string;
   classNames?: Array<string>;
-  eventConfiguration?: EventConfiguration;
+  eventConfigurations?: Array<EventConfiguration>;
 }
 export const BaseElement = ({
   children,
@@ -17,7 +17,7 @@ export const BaseElement = ({
   style,
   id,
   testId,
-  eventConfiguration,
+  eventConfigurations,
   classNames
 }: BaseElementProps): React.JSX.Element => {
 
@@ -28,7 +28,7 @@ export const BaseElement = ({
 
   const baseStyles = useBaseElementStyles();
 
-  useEventHandlers({ ref, eventConfiguration });
+  useEventHandlers({ ref, eventConfigurations });
 
   return (
     <div

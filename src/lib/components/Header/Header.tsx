@@ -64,10 +64,10 @@ export const Header = ({
               id={navItem.id}
               label={navItem.label}
               active={currentSectionIdInView === navItem.id}
-              eventConfiguration={{
+              eventConfigurations={[{
                 listenTo: [SupportedEvents.POINTER_CLICK],
                 handler: () => onNavigate && onNavigate(navItem.id)
-              }}
+              }]}
               style={navItemStyles}
             />
           ))}

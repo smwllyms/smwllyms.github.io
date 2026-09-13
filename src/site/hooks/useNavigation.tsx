@@ -19,6 +19,7 @@ export const useNavigation = (props: UseNavigationProps): UseNavigationResult =>
   const navigationEntries = React.useMemo(() => props.navigationEntries, [props.navigationEntries]);
   const [currentSectionId, setCurrentSectionId] = React.useState<string>(props.initialSectionId || navigationEntries[0].sectionId);
   const [currentSectionIdInView, setCurrentSectionIdInView] = React.useState<string | undefined>(undefined);
+  const [key, setKey] = React.useState(0); // Forces re-render when clicked section is same but user has scrolled away
 
   React.useEffect(() => {
 
@@ -36,22 +37,23 @@ export const useNavigation = (props: UseNavigationProps): UseNavigationResult =>
       behavior: "smooth",
       top
     });
-  }, [currentSectionId, navigationEntries]);
+  }, [currentSectionId, navigationEntries, key]);
 
   React.useEffect(() => {
-    const rootMargin = `-${props.offsetY || 0}px 0px 0px 0px`;
+    const rootMargin = `-${props.offsetY || 0}px 0px -100% 0px`;
     const observer = new IntersectionObserver((entries) => {
-      if (!entries || entries.length === 0) return;
-      // choose the entry with the largest intersectionRatio
-      let best = entries[0];
-      for (let i = 1; i < entries.length; i++) {
-        if (entries[i].intersectionRatio > best.intersectionRatio) best = entries[i];
+      let best = null;
+      for (let i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          if (!best || entries[i].target.getBoundingClientRect().top > best.target.getBoundingClientRect().top) {
+            best = entries[i];
+          }
+        }
       }
-      const id = best.target.id;
-      if (best.isIntersecting && best.intersectionRatio > 0.2) {
-        setCurrentSectionIdInView(id);
+      if (best) {
+        setCurrentSectionIdInView(best.target.id);
       }
-    }, { threshold: [0, 0.25, 0.45, 0.6, 0.8], rootMargin });
+    }, { threshold: 0, rootMargin });
 
     const observed: Element[] = [];
     navigationEntries.forEach(entry => {
@@ -68,7 +70,10 @@ export const useNavigation = (props: UseNavigationProps): UseNavigationResult =>
     };
   }, [navigationEntries, props.offsetY]);
 
-  const navigate = React.useCallback((newSectionId: string) => setCurrentSectionId(newSectionId), []);
+  const navigate = React.useCallback((newSectionId: string) => {
+    setCurrentSectionId(newSectionId);
+    setKey(prev => prev + 1);
+  }, []);
 
   return { navigate, currentSectionIdInView };
 }

@@ -33,30 +33,34 @@ export interface EventConfiguration {
 }
 
 interface UseEventHandlersProps {
-  eventConfiguration: EventConfiguration | undefined;
+  eventConfigurations: Array<EventConfiguration> | undefined;
   ref: React.RefObject<HTMLDivElement | null>;
 }
 export const useEventHandlers = ({
   ref,
-  eventConfiguration
+  eventConfigurations
 }: UseEventHandlersProps): void => {
 
   React.useEffect(() => {
-    if (!ref.current || !eventConfiguration) {
+    if (!ref.current || !eventConfigurations || eventConfigurations.length === 0) {
       return;
     }
     const element = ref.current;
-    const nativeEventHandler = (nativeEvent: Event): void => {
-      eventConfiguration.handler({
-        type: SupportedEventsValues[nativeEvent.type as EventT] as SupportedEvents,
-        nativeEvent: nativeEvent as PointerEvent | MouseEvent
-      });
+    const cleanupFunctions: Array<() => void> = [];
+    for (const eventConfiguration of eventConfigurations) {
+      const nativeEventHandler = (nativeEvent: Event): void => {
+        eventConfiguration.handler({
+          type: SupportedEventsValues[nativeEvent.type as EventT] as SupportedEvents,
+          nativeEvent: nativeEvent as PointerEvent | MouseEvent
+        });
+      }
+      const listenTo = eventConfiguration.listenTo || Object.values(SupportedEvents);
+      const supportedEventTypes = (Object.keys(SupportedEventsValues) as EventT[])
+        .filter(eventType => listenTo.includes(SupportedEventsValues[eventType] as SupportedEvents));
+      supportedEventTypes.forEach(eventType => element.addEventListener(eventType, nativeEventHandler));
+      cleanupFunctions.push(() => supportedEventTypes.forEach(eventType => element.removeEventListener(eventType, nativeEventHandler)));
     }
-    const listenTo = eventConfiguration.listenTo || Object.values(SupportedEvents);
-    const supportedEventTypes = (Object.keys(SupportedEventsValues) as EventT[])
-      .filter(eventType => listenTo.includes(SupportedEventsValues[eventType] as SupportedEvents));
-    supportedEventTypes.forEach(eventType => element.addEventListener(eventType, nativeEventHandler));
-    return () => supportedEventTypes.forEach(eventType => element.removeEventListener(eventType, nativeEventHandler));
-  }, [ref, JSON.stringify(eventConfiguration)]);
+    return () => cleanupFunctions.forEach(cleanupFn => cleanupFn());
+  }, [ref, JSON.stringify(eventConfigurations)]);
 
 }
