@@ -1,5 +1,5 @@
 import * as React from "react";
-import airshare from "../../img/projects/airshare.png";
+import nvvi from "../../img/projects/nvvi-1.png";
 import youtube from "../../img/projects/youtube.png";
 import fourier from "../../img/projects/fourier.png";
 import audioplugindev from "../../img/projects/audioplugindev.png";
@@ -20,10 +20,10 @@ export const Projects = (): React.JSX.Element => {
       <HeroSlider
         items={[
           {
-            title: "YouTube series on the Fourier Transform",
-            description: "I created a YouTube series on the Fourier Transform, code-wise as well as visually (in Desmos). I also explain how the algorithm is progressively optimized (eg, into the FFT).",
-            image: youtube,
-            link: "https://www.youtube.com/@sqfx744/playlists"
+            title: "NVVI overview, demo, and mock study",
+            description: "An overview of the pitch-based NVVI tool implementation used in my thesis work. See how well you can control a slider with the pitch of your humming and whistling!",
+            image: nvvi,
+            link: "https://smwllyms.github.io/nvvi-pitch-based-1"
           },
           {
             title: "Fourier and audio processing tools",
@@ -44,10 +44,10 @@ export const Projects = (): React.JSX.Element => {
             link: "https://smwllyms.github.io/OnlineAsmDebugger/"
           },
           {
-            title: "AirShare",
-            description: "AirShare is a real-time file-sharing web application allowing you to share files instantly across different devices. Implemented with WebRTC and Next.js.",
-            image: airshare,
-            link: "https://airshare-phi.vercel.app/"
+            title: "YouTube series on the Fourier Transform",
+            description: "I created a YouTube series on the Fourier Transform, code-wise as well as visually (in Desmos). I also explain how the algorithm is progressively optimized (eg, into the FFT).",
+            image: youtube,
+            link: "https://www.youtube.com/@sqfx744/playlists"
           }
         ]}
         auto={true}
