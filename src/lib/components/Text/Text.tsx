@@ -3,7 +3,7 @@ import { BaseElement, BaseElementProps } from "../Base/BaseElement";
 import { useTextStyles } from "./Text.css";
 
 export interface TextProps extends BaseElementProps {
-  text: string;
+  text: string | React.JSX.Element;
 }
 
 export const Text = ({

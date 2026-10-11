@@ -26,12 +26,6 @@ export const Projects = (): React.JSX.Element => {
             link: "https://smwllyms.github.io/nvvi-pitch-based-1"
           },
           {
-            title: "Fourier and audio processing tools",
-            description: "Check out some of my work with the famous audio-processing Discrete and Fast Fourier Transform (DFT and FFT) algorithms! Explore an online calculator that showcases a variety of optomized algorithms for calculating FT and IFTs of input values, and visit the live fourier analysis where you can watch the algorithm at work as it guesses the pitch of oscillators or audio input from your microphone!",
-            image: fourier,
-            link: "https://smwllyms.github.io/FourierStuff"
-          },
-          {
             title: "Audio plugin development sandbox",
             description: "Explore audio processing in my plug-and-play web browser-based audio plugin GUI development sandbox! This work-in-progress is part of a larger project where I hope to exponentially improve VST development time by allowing prototyping in this sandbox. If you've ever tried developing VSTs using Steinberg's SDK, you know how time consuming and redundant much of it is.",
             image: audioplugindev,
@@ -48,6 +42,12 @@ export const Projects = (): React.JSX.Element => {
             description: "I created a YouTube series on the Fourier Transform, code-wise as well as visually (in Desmos). I also explain how the algorithm is progressively optimized (eg, into the FFT).",
             image: youtube,
             link: "https://www.youtube.com/@sqfx744/playlists"
+          },
+          {
+            title: "Fourier analysis tools",
+            description: "Check out some of my work with the famous audio-processing Discrete and Fast Fourier Transform (DFT and FFT) algorithms! Explore an online calculator that showcases a variety of optomized algorithms for calculating FT and IFTs of input values, and visit the live fourier analysis where you can watch the algorithm at work as it guesses the pitch of oscillators or audio input from your microphone!",
+            image: fourier,
+            link: "https://smwllyms.github.io/FourierStuff"
           }
         ]}
         auto={true}

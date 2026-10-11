@@ -20,8 +20,7 @@ export const SlideBaseStyles: React.CSSProperties = {
   justifyContent: "center",
   position: "absolute",
   left: 0,
-  top: 0,
-  transition: "opacity 300ms ease, transform 300ms ease",
+  top: 0
 };
 
 export const ImageBaseStyles: React.CSSProperties = {
@@ -45,13 +44,13 @@ export const SlideImageWrapperBaseStyles: React.CSSProperties = {
 
 export const OverlayBaseStyles: React.CSSProperties = {
   position: "absolute",
+  bottom: "10px",
   color: "#fff",
   background: "rgba(0,0,0,0.48)",
   borderRadius: 8,
-  padding: "16px",
+  padding: "16px 24px",
   maxWidth: "70%",
   boxSizing: "border-box",
-  transition: "opacity 300ms ease, transform 300ms ease",
   backdropFilter: "blur(20px)",
   WebkitBackdropFilter: "blur(20px)",
   boxShadow: "0px 0px 2px rgb(6, 6, 7)"
@@ -82,15 +81,11 @@ export const RightArrowBaseStyles: React.CSSProperties = {
 };
 
 export const DotsBaseStyles: React.CSSProperties = {
-  position: "absolute",
-  bottom: 12,
-  left: "50%",
-  transform: "translateX(-50%)",
   display: "flex",
   gap: 8,
   alignItems: "center",
-  padding: "6px 10px",
-  background: "rgba(0,0,0,0.35)",
+  alignSelf: "center",
+  padding: "10px 10px",
   borderRadius: 999,
   zIndex: 3,
 };
@@ -122,7 +117,10 @@ export const useSlideStyles = (active?: boolean): React.CSSProperties => ({
   pointerEvents: active ? "auto" : "none",
 });
 
-export const useImageStyles = (): React.CSSProperties => ({ ...ImageBaseStyles });
+export const useImageStyles = (active?: boolean): React.CSSProperties => ({
+  ...ImageBaseStyles,
+  opacity: active ? 1 : 0
+});
 export const useImageWrapperStyles = (): React.CSSProperties => ({ ...SlideImageWrapperBaseStyles });
 
 export const useOverlayStyles = (active?: boolean): React.CSSProperties => ({
@@ -150,7 +148,8 @@ export const DescriptionBaseStyles: React.CSSProperties = {
   display: "-webkit-box",
   WebkitLineClamp: 4,
   WebkitBoxOrient: "vertical",
-  overflow: "hidden"
+  overflowY: "auto",
+  maxHeight: "100px"
 };
 
 export default HeroSliderBaseStyles;

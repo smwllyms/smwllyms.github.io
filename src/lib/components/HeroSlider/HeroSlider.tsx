@@ -42,11 +42,18 @@ export const HeroSlider = ({
   classNames,
   style
 }: HeroSliderProps): React.JSX.Element => {
+
   const [index, setIndex] = React.useState(0);
+  const [expanded, setExpanded] = React.useState<boolean>(false);
+  const expandedRef = React.useRef<boolean>(false);
+  const onChangeExpanded = (value: boolean): void => {
+    setExpanded(value);
+    expandedRef.current = value;
+  }
+
   const count = items.length;
 
   const styles = useHeroSliderStyles();
-  const imgStyles = useImageStyles();
   const imgWrapperStyles = useImageWrapperStyles();
   const leftArrowStyles = LeftArrowBaseStyles;
   const rightArrowStyles = RightArrowBaseStyles;
@@ -75,10 +82,14 @@ export const HeroSlider = ({
     }
   }), [index, items]);
 
-  // auto slide
+  // Auto slide
   React.useEffect(() => {
     if (!auto || count <= 1) return;
-    const id = window.setInterval(() => next(), intervalMs);
+    const id = window.setInterval(() => {
+      // Don't auto slide when expanded
+      if (expandedRef.current === true) return;
+      next();
+    }, intervalMs);
     return () => window.clearInterval(id);
   }, [auto, index, intervalMs, count]);
 
@@ -94,6 +105,7 @@ export const HeroSlider = ({
       {count > 0 ? (
         <>
           {items.map((it, i) => {
+            const imgStyle = useImageStyles(i === index);
             const slideStyle = useSlideStyles(i === index);
             const overlayStyle = useOverlayStyles(i === index);
             return (
@@ -104,7 +116,7 @@ export const HeroSlider = ({
                 <Image
                   src={it.image}
                   alt={it.title}
-                  imgStyle={imgStyles}
+                  imgStyle={imgStyle}
                   wrapperStyle={imgWrapperStyles}
                 />
                 <BaseElement style={overlayStyle}>
@@ -113,31 +125,56 @@ export const HeroSlider = ({
                       width: "100%",
                       alignItems: "center"
                     }}>
-                      <Text
-                        text={it.title}
-                        style={titleStyles}
-                      />
-                    </BaseElement>
-                    {it.description ? <Text
-                      text={it.description}
-                      style={descStyles}
-                    /> : <></>}
-                    {it.link ? (
                       <BaseElement style={{
                         width: "100%",
-                        alignItems: "center"
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        flexDirection: "row",
+                        gap: "20px"
                       }}>
-                        <Button
-                          data-action="view"
-                          style={buttonStyles}
-                          label={"Learn more"}
-                          onClick={items[index].link
-                            ? () => window.open(items[index].link, "_blank")
-                            : undefined
-                          }
+                        <Text
+                          text={it.title}
+                          style={titleStyles}
                         />
+                        <a
+                          style={{ cursor: "pointer", textDecoration: "underline" }}
+                          onClick={() => onChangeExpanded(!expandedRef.current)}
+                        >
+                          {`Show ${expanded ? "less" : "more"}`}
+                        </a>
                       </BaseElement>
-                    ) : <></>}
+                    </BaseElement>
+                    {expanded && <>
+                      {it.description ? <Text
+                        text={it.description}
+                        style={descStyles}
+                      /> : <></>}
+                      {it.link ? (
+                        <BaseElement style={{
+                          width: "100%",
+                          alignItems: "center"
+                        }}>
+                          <Button
+                            data-action="view"
+                            style={buttonStyles}
+                            label={"Learn more"}
+                            onClick={items[index].link
+                              ? () => window.open(items[index].link, "_blank")
+                              : undefined
+                            }
+                          />
+                        </BaseElement>
+                      ) : <></>}
+                    </>}
+                    <div style={dotsStyles}>
+                      {items.map((_, i) => (
+                        <div
+                          key={i}
+                          data-action={`dot-${i}`}
+                          style={useDotStyles(i === index)}
+                        />
+                      ))}
+                    </div>
                   </>
                 </BaseElement>
               </BaseElement>
@@ -156,7 +193,7 @@ export const HeroSlider = ({
             }]}
             ariaLabel="Previous"
           >
-            <div>◀</div>
+            <div style={{ transform: "scaleX(-1)" }}>&#x279C;</div>
           </BaseElement>
           <BaseElement
             style={rightArrowStyles}
@@ -166,17 +203,8 @@ export const HeroSlider = ({
             }]}
             ariaLabel="Next"
           >
-            <div>▶</div>
+            <div>&#x279C;</div>
           </BaseElement>
-          <div style={dotsStyles}>
-            {items.map((_, i) => (
-              <div
-                key={i}
-                data-action={`dot-${i}`}
-                style={useDotStyles(i === index)}
-              />
-            ))}
-          </div>
         </>
       ) : <></>}
     </BaseElement>
