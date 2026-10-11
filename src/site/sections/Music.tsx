@@ -51,9 +51,9 @@ export const Music = (): React.JSX.Element => {
           style={{ paddingTop: "0px" }}
           text={(
             <ul>
-              <li><a href="https://soundcloud.com/sqfx-itstimehttps://soundcloud.com/squiffix-itstime">My (latest) SoundCloud</a></li>
-              <li><span><a href="https://open.spotify.com/artist/2BmAeGaSrzNsxhqfoS6PKr">Spotify</a>, <a href="https://music.amazon.com/artists/B088R2CX7N/sqfx">Amazon Music</a></span></li>
-              <li><a href="https://kiwishinshi.bandcamp.com">Kiwi Shinshi project</a></li>
+              <li><a target="_blank" href="https://soundcloud.com/sqfx-itstime">My (latest) SoundCloud</a></li>
+              <li><span><a target="_blank" href="https://open.spotify.com/artist/2BmAeGaSrzNsxhqfoS6PKr">Spotify</a>, <a target="_blank" href="https://music.amazon.com/artists/B088R2CX7N/sqfx">Amazon Music</a></span></li>
+              <li><a target="_blank" href="https://kiwishinshi.bandcamp.com">Kiwi Shinshi project</a></li>
             </ul>
           )} />
       </div>

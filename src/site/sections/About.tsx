@@ -22,7 +22,7 @@ export const About = (): React.JSX.Element => {
       }}
     >
       <Text
-        text={"Software Engineer specializing in immersive applications, with a strong background in audio programming and GUI development. Committed to enhancing web accessibility and creating interactive and educational web applications. Blending creativity with technical prowess to deliver impactful digital experiences."}
+        text={"At the intersection of music and audio, software engineering, and immersive environments and applications, I aim to leverage my creativity, work ethic, and passion to innovate and support musical and audio spaces in industry, open-source, and academia."}
         style={{
           borderLeft: "4px solid rgba(0,0,255,0.4)",
           background: "rgba(0,0,0,0.1)",
@@ -51,8 +51,13 @@ export const About = (): React.JSX.Element => {
           }}
         />
       </BaseElement>
-      <Text text={"I am Sam Williams, a computer scientist and engineer specializing in web applications and design, programming education, and audio programming. My driving force in this world is to help create a knowledgeable community of programmers that contribute to open-source and educational programs and applications to help others learn about programming and computer science! Specifically, I'd like to improve general knowledge on the development of audio plugins like VSTs."} />
-      <Text text={"I also taught as an adjunct instructor for an introductory course to GUI, computer graphics and full-stack development."} />
+      <Text text={<>
+      <p>I am Sam Williams - a musician, software engineer, and passionate advocate for learning and accessibility, specifically in the world of audio. I've always seen programming as a means to an end, a tool in the human arsenal for acheiving goals. My goal is to leverage my unique blend of perspective, passions, and skills to help contribute to and improve the music and audio space for musicians, audio software developers, and everyone in between.</p>
+      <p>I started playing on a small drumset when I was 5 years old, picked up acoustic and electric guitar in third grade, played the alto and tenor saxophone and french horn in concert bands in school, played saxophone and bass guitar in a few jazz bands, and performed in marching band throughout high school, serving as drum major my senior year. I have also been producing, mixing and mastering music (mostly electronic) for over 10 years.</p>
+      <p>I created my first website in third grade (gamesterguy.com - a repository of flash games I liked), a flash game for a math project in sixth grade (which I received an A on), and built numerous games in Unity3D in highschool. I started audio programming in college (mostly VSTs like phase vocoders exploring auto-tuning, pitch mapping, and timbre shifting) in addition to others like compression and transient shaping. View my projects to explore more of my prior work.</p>
+      <p>I attended Virginia Tech for both my B.S. (Fall 2022) and M.S. (Winter 2023) in computer science. I was a member of the <a href="https://wordpress.cs.vt.edu/dvelab/" target="_blank">Distributed Virtul Environments (D.V.E.) lab</a> under the supervision of Denis Gracanin.</p>
+      <p>I also taught as an adjunct instructor for an introductory course to GUI, computer graphics and full-stack development.</p>
+      </>} />
       <BaseElement
         style={{
           flexDirection: "row",
